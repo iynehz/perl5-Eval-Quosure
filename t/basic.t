@@ -23,6 +23,7 @@ my $q = foo();
 my $a = 0;    # This is not used when evaluating the quosure.
 is( $q->eval( { '$c' => 7 } ), 42 );
 is( $q->eval( { '$c' => 2 } ), 12 );
+is( $q->eval( { '$b' => 1, '$c' => 2 } ), 4 );
 
 sub baz {
     my $b = 7;
