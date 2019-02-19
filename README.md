@@ -6,7 +6,7 @@ Eval::Quosure - Evaluate within a caller environment
 
 # VERSION
 
-version 0.0000\_01
+version 0.001000
 
 # SYNOPSIS
 
