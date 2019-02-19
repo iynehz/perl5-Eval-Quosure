@@ -10,9 +10,9 @@ use warnings;
 
 use List::Util 1.28 qw(pairmap);
 use PadWalker 2.3 qw(peek_my peek_our);
-use Safe::Isa;
-use Sub::Quote qw(quote_sub);
-use Type::Params;
+use Safe::Isa 1.000009;
+use Sub::Quote 2.005 qw(quote_sub);
+use Type::Params 1.004004;
 use Types::Standard qw(Str Int HashRef Optional);
 
 sub new {
