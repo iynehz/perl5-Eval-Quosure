@@ -38,6 +38,17 @@ can be evaluated.
 
 Note that as this is string eval so is not secure. USE IT WITH CAUTION!
 
+# CONSTRUCTION
+
+```
+new(Str $expr, $level=0)
+```
+
+`$expr` is a string. `$level` is used like the argument of `caller` and
+PadWalker's `peek_my`, `0` is for the scope that creates the quosure
+object, `1` is for the upper scope of the scope that creates the quosure,
+and so on. 
+
 # METHODS
 
 ## expr
@@ -65,17 +76,6 @@ Evaluate the quosure's expression in its own environment, with captured
 variables from what's obtained when the quosure's created plus specified
 by `$additional_captures`, which is a hashref with keys be the full name
 of the variable including sigil.
-
-# CONSTRUCTION
-
-```
-new(Str $expr, $level=0)
-```
-
-`$expr` is a string. `$level` is used like the argument of `caller` and
-PadWalker's `peek_my`, `0` is for the scope that creates the quosure
-object, `1` is for the upper scope of the scope that creates the quosure,
-and so on. 
 
 # SEE ALSO
 
