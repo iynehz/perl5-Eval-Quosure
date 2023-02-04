@@ -93,7 +93,35 @@ sub eval {
             hintshash => undef,
         }
     );
-    return $coderef->();
+
+    my @rslt;
+    if (wantarray) {
+        @rslt = eval { $coderef->(); };
+    }
+    elsif ( defined wantarray ) {
+        $rslt[0] = eval { $coderef->(); };
+    }
+    else {
+        eval { $coderef->(); };
+    }
+    if ($@) {
+
+        # Simplify error message as sometimes part of what's come from
+        #  Sub::Quote may not be very meaningful to users.
+        # See also https://metacpan.org/source/HAARG/Sub-Quote-2.006003/lib/Sub/Quote.pm#L307
+        my $msg = $@;
+        $msg =~ s/.*\d+:.*?[\n]+//ms;
+        die $msg;
+    }
+    if (wantarray) {
+        return @rslt;
+    }
+    elsif ( defined wantarray ) {
+        return $rslt[0];
+    }
+    else {
+        return;
+    }
 }
 
 1;
