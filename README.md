@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/stphnlyd/perl5-Eval-Quosure.svg?branch=master)](https://travis-ci.org/stphnlyd/perl5-Eval-Quosure)
+[![Build Status](https://travis-ci.org/iynehz/perl5-Eval-Quosure.svg?branch=master)](https://travis-ci.org/iynehz/perl5-Eval-Quosure)
 
 # NAME
 
@@ -6,7 +6,7 @@ Eval::Quosure - Evaluate within a caller environment
 
 # VERSION
 
-version 0.001000
+version 0.001002
 
 # SYNOPSIS
 
@@ -82,7 +82,7 @@ of the variable including sigil.
 [R's "rlang" package](https://cran.r-project.org/web/packages/rlang) which
 provides quosure.
 
-[Eval::Closure](https://metacpan.org/pod/Eval::Closure), [Binding](https://metacpan.org/pod/Binding)
+[Eval::Closure](https://metacpan.org/pod/Eval%3A%3AClosure), [Binding](https://metacpan.org/pod/Binding)
 
 # AUTHOR
 
@@ -90,7 +90,7 @@ Stephan Loyd <sloyd@cpan.org>
 
 # COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2019 by Stephan Loyd.
+This software is copyright (c) 2019-2023 by Stephan Loyd.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
